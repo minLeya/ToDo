@@ -1,11 +1,9 @@
 import java.lang.String;
 public class Task {
     private String textOfTask;
-    private boolean isDone;
+    private boolean isDone; // is it better to use here enum? like done / in process
 
-    Task() {
-
-    }
+    Task() { }
 
     Task(String textOfTask, boolean isDone){
         this.textOfTask = textOfTask;
@@ -27,4 +25,9 @@ public class Task {
     public boolean getIsDone() {
         return isDone;
     }
+
+    public boolean searchTask(String textToSearch) {
+        return (textOfTask.equals(textToSearch));
+    }
+
 }
