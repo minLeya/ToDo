@@ -1,5 +1,6 @@
 import java.util.Scanner;
 
+
 public class Main {
     public static void main(String[] args) {
         TaskList list = new TaskList();
@@ -48,6 +49,12 @@ public class Main {
                         list.modifyBoth(index - 1, scan.nextLine(), TaskStatus.DONE);
                     }
                     break;
+                case 6:
+                    list.writeToFile();
+                    break;
+                case 7:
+                    list.readFromFile();
+                    break;
                 case -1:
                     cycle = false;
                     break;
@@ -63,6 +70,8 @@ public class Main {
         System.out.println("3. find task.");
         System.out.println("4. remove task.");
         System.out.println("5. modify task.");
+        System.out.println("6. write to file.");
+        System.out.println("7. read from file.");
         System.out.println("-1. exit.");
         System.out.print("enter your choice: ");
         //add file input and output
